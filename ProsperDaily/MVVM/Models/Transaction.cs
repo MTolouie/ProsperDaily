@@ -1,4 +1,4 @@
-﻿using ProsperDailyTests.Abstractions;
+﻿using ProsperDaily.Abstractions;
 using System;
 using System.Collections.Generic;
 using System.Linq;

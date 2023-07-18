@@ -1,13 +1,17 @@
-﻿using ProsperDaily.MVVM.Views;
+﻿using ProsperDaily.MVVM.Models;
+using ProsperDaily.MVVM.Views;
+using ProsperDailyTests.Repositories;
 
 namespace ProsperDaily;
 
 public partial class App : Application
 {
-	public App()
+
+    public static BaseRepository<Transaction>	TransactionsRepository { get; set; }
+    public App(BaseRepository<Transaction> _transactionsRepository)
 	{
 		InitializeComponent();
-
-		MainPage = new DashboardPage();
+		TransactionsRepository = _transactionsRepository;
+		MainPage = new TransactionsPage();
 	}
 }

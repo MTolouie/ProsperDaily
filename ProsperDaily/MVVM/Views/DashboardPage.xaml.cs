@@ -6,4 +6,9 @@ public partial class DashboardPage : ContentPage
 	{
 		InitializeComponent();
 	}
+
+    private async void AddTransaction_Clicked(object sender, EventArgs e)
+    {
+		await Navigation.PushAsync(new TransactionsPage());
+    }
 }
